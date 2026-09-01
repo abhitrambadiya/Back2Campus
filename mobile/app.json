@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "Back2Campus",
+    "slug": "Back2Campus",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "userInterfaceStyle": "automatic",
+      "supportsTablet": true,
+      "deploymentTarget": "18.4",
+      "bundleIdentifier": "com.abhi.back2campus"
+    },
+    "android": {
+      "userInterfaceStyle": "automatic",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": false,
+      "navigationBarColor": "#ffffff",
+      "statusBarColor": "#ffffff",
+      "statusBarStyle": "dark"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
