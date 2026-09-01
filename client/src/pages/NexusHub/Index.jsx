@@ -449,7 +449,7 @@ const InfoCardsSectionIntegrated = () => {
 
           <strong className="block mb-2">Mission</strong>
           <p>
-            To provide a platform that helps students and alumni connect through
+            To provide a platform that helps students & alumni connect through
             mentorship, career opportunities, events, knowledge sharing, and
             meaningful professional relationships.
           </p>
