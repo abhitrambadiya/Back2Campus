@@ -12,8 +12,8 @@ import compression from 'compression';
 dotenv.config();
 const app = express();
 const allowedOrigins = [
-  "http://localhost:5173",
-  "https://back2campus-server.onrender.com"
+  "https://back2campus.pages.dev",
+  "http://localhost:5173"
 ];
 
 // Increase payload limits for base64 images
@@ -37,7 +37,6 @@ app.use(cors({
   credentials: true,
   optionsSuccessStatus: 200
 }));
-app.use(express.json());
 app.use(helmet());
 app.use(mongoSanitize());
 app.use(xss());
@@ -69,7 +68,10 @@ app.use('/api/nexushub', nexusHubRoutes) // NexusHUB Routes
 
 // Health check endpoint
 app.get('/health', (req, res) => {
-  res.status(200).json({ status: 'ok', message: 'Server is running' });
+  res.status(200).json({
+    status: 'ok',
+    message: 'Server is running'
+  });
 });
 // 404 handler
 app.use((req, res) => {
@@ -87,7 +89,4 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
-// app.listen(PORT, '0.0.0.0', () => {
-//   console.log(`Server running on http://0.0.0.0:${PORT}`);
-// });
 
